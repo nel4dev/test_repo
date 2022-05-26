@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Melktert</title>
+    <style>
+      h1 {
+        text-align: center;
+        color: #1f2126;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h2 {
+        text-align: center;
+        color: #1f2126;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: 5px;
+      }
+      p {
+        font-size: 17px;
+        margin: 18px;
+        line-height: 23px;
+        font-weight: lighter;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      body {
+        background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+      }
+      button {
+        display: block;
+        margin: 0 auto 40px;
+        padding: 18px 20px;
+        border-radius: 40px;
+        color: white;
+        background-color: #1f2126;
+        font-size: 16px;
+        border: 1px solid transparent;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        color: #1f2126;
+        background: white;
+        cursor: pointer;
+      }
+      p.footer {
+        font-family: "Courier New", Courier, monospace;
+        font-size: 15px;
+        text-align: center;
+        border: 1px solid #1f2126;
+        margin: 0 auto 40px;
+        padding: 10px 20px;
+        width: 250px;
+      }
+      div {
+        display: block;
+        max-width: 600px;
+        margin: 20px auto;
+      }
+      .recipe {
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        color: indigo;
+        display: block;
+        margin: top 20px 50px;
+        padding-left: 20px;
+        font-weight: lighter;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Melktert</h1>
+      <h2>What is Melktert?</h2>
+      <br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/034/564/original/IMG_4029-scaled.jpeg?1652786012"
+        alt="Melktert"
+        width="400"
+      />
+    </div>
+    <div>
+      <p>
+        <strong>
+          <em>
+            Melktert is a South-African “pie”. Its name means literally “milk
+            tart” or “milk pie.”
+          </em>
+        </strong>
+        <br />
+        <br />
+
+        It is a pie with a crust and a bland custard as the filling, baked in a
+        round pie tin. After baking, it is often dusted with cinnamon. Some
+        versions don’t use a crust; but many people say that if there’s no
+        crust, it’s not a Melktert.
+        <br />
+        <br />
+        Some recipes have you add the eggs whole (though shelled of course);
+        others have you separate the eggs, beat the egg whites, and then added
+        the yolks and beaten egg white.
+        <br />
+        <br />
+        The traditional crust is a short-crust, but many people nowadays like to
+        use ready-made puff pastry dough from the store instead. Melktert
+        appears at just about every bake sale.
+
+        <br />
+        <br />
+        It’s so omnipresent in South Africa that some people are sick of it, but
+        they are afraid to say that out loud because you are sure to offend
+        someone. It is served in slices, chilled or room-temperature.
+      </p>
+    </div>
+    <div>
+      <hr />
+      <span
+        ><a
+          href="https://www.allrecipes.com/recipe/80160/south-african-melktert-milk-tart/"
+          target="_blank"
+          class="recipe"
+        >
+          Find the recipe here
+        </a>
+      </span>
+      <span>
+        <button>Subscribe</button>
+      </span>
+      <br />
+      <p class="footer">Coded by Maronel Lotter</p>
+    </div>
+    <script>
+      let subscribeButton = document.querySelector("button");
+
+      subscribeButton.addEventListener("click", subscribe);
+
+      function subscribe() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email address?");
+        let age = prompt("How old are you?");
+
+        checkAgeOverEighteen(age, name);
+      }
+
+      function checkAgeOverEighteen(age, name) {
+        if (age >= 18) {
+          alert("Hi " + name + ", thanks for subscribing!😃");
+        } else if (age < 18) {
+          alert("Hi " + name + ", you are too young to subscribe 😔");
+        }
+      }
+    </script>
+  </body>
+</html>
